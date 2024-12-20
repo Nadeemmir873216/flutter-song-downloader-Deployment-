@@ -4,6 +4,10 @@ import yt_dlp
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Welcome to the Audio Downloader API!"
+
 def download_audio(song_name):
     download_folder = 'assets/audio'
     if not os.path.exists(download_folder):
